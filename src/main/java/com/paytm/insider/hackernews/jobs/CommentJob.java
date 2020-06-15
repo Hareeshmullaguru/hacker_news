@@ -10,24 +10,29 @@ import java.util.PriorityQueue;
 import java.util.Map.Entry;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.paytm.insider.hackernews.entity.Comment;
+import com.paytm.insider.hackernews.entity.User;
 import com.paytm.insider.hackernews.external.hackerNews.HackerNewsApiManager;
 import com.paytm.insider.hackernews.external.pojo.hackernews.CommentPojo;
+import com.paytm.insider.hackernews.external.pojo.hackernews.UserPojo;
 import com.paytm.insider.hackernews.repo.jpa.CommentRespository;
+import com.paytm.insider.hackernews.service.CommentService;
+import com.paytm.insider.hackernews.service.UserService;
 import com.paytm.insider.hackernews.util.PairParentChild;
 
 @Component
+@Scope("prototype")
 public class CommentJob implements Runnable{
 	
+	@Autowired
+	CommentService commentService;
 	
 	@Autowired
-	HackerNewsApiManager hackerApiManager;
-	
-	@Autowired
-	CommentRespository commentRespository;
+	UserService userService;
     
 	private List<Long> commentIds;
 	private Long parentId;
@@ -51,22 +56,11 @@ public class CommentJob implements Runnable{
 		this.parentId = parentId;
 	}
 
-
-	
-	
-	
-	
-	
-//	public CommentJob(List<Long> commentIds,Long parentId) {
-//		this.commentIds=commentIds;
-//		this.parentId=parentId;
-//	}
-	
 	@Transactional
 	@Override
 	public void run() {
 		
-      if(commentIds.size() == 0) return;
+      if(commentIds != null && commentIds.size() == 0) return;
 		
 		HashMap<Long,Long> commentsParent=new HashMap<Long,Long>(); // parent comment and count
 		
@@ -85,7 +79,7 @@ public class CommentJob implements Runnable{
 			commentsParent.put(pair.getParent(), commentsParent.getOrDefault(pair.getParent(), 0L) + 1);
 			
 			// gets child comments
-			CommentPojo commentPojo=hackerApiManager.getCommentInfo(pair.getChild());
+			CommentPojo commentPojo=commentService.getCommentInfo(pair.getChild());
 			
 			if( commentPojo != null  && commentPojo.getKids() != null && commentPojo.getKids().size() > 0) {
 				for(Long kid: commentPojo.getKids()) {
@@ -105,14 +99,17 @@ public class CommentJob implements Runnable{
 		
 		// before inserting remove the top 10 comments of the story id
 		if(!pq.isEmpty()) {
-			commentRespository.deleteByStoryId(parentId);
+			commentService.deleteCommentByStoryId(parentId);
 		}
 		
 		int i=0;
 		while(i < 10 && !pq.isEmpty()) {
 			PairParentChild ppc=pq.poll();
-			CommentPojo commentPojo=hackerApiManager.getCommentInfo(ppc.getChild());
-			commentRespository.save(convertCommentPojoToComment(commentPojo));
+			CommentPojo commentPojo=commentService.getCommentInfo(ppc.getChild());
+			commentService.saveComment(convertCommentPojoToComment(commentPojo));
+			UserPojo userPojo=new UserPojo();
+			userPojo.setId(commentPojo.getBy());
+			userService.saveUser(userPojo); // save the user 
 			i++;
 		}
 		
@@ -124,8 +121,6 @@ public class CommentJob implements Runnable{
 		comment.setStoryId(commentPojo.getParent());
 		comment.setCommentId(commentPojo.getId());
 		comment.setAddedBy(commentPojo.getBy());
-		Integer age=LocalDateTime.now().getYear() - LocalDateTime.ofEpochSecond(commentPojo.getTime(), 0, ZonedDateTime.now().getOffset()).getYear();
-		comment.setTime(age);
 		comment.setText(commentPojo.getText());
 		return comment;
 	}

@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,24 +18,30 @@ import com.paytm.insider.hackernews.external.hackerNews.HackerNewsApiManager;
 import com.paytm.insider.hackernews.external.pojo.hackernews.CommentPojo;
 import com.paytm.insider.hackernews.external.pojo.hackernews.StoryPojo;
 import com.paytm.insider.hackernews.jobs.CommentJob;
-import com.paytm.insider.hackernews.repo.jpa.CommentRespository;
-import com.paytm.insider.hackernews.repo.jpa.StoryRespository;
-import com.paytm.insider.hackernews.util.PairParentChild;
+import com.paytm.insider.hackernews.util.UnixTimeToLocalDateTIme;
 
 @Service
 public class AsycService {
-
-	@Autowired
-	HackerNewsApiManager hackerApiManager;
 	
 	@Autowired
-	StoryRespository  storyRespository;
+	CommentService commentService;
+	
+	@Autowired
+	StoryService storyService;
+	
 	
 	@Autowired
 	CommentJob commentJob;
 	
 	@Autowired
-	CommentRespository  commentRepository;
+	CommentJob commentJob2;
+	
+	@Autowired
+	CommentJob commentJob3;
+	
+	@Value("${hackernews.topstories}")
+	private Integer top;
+	
 	
 	
 	@Scheduled(fixedRate = 600000)  // every 10 minutes run this job (1000 * 60) * 10
@@ -42,7 +49,7 @@ public class AsycService {
 	public void findTopStories(){
 		
 		// get the top 500 stories from the hacker news api
-        List<Integer> topStoires=hackerApiManager.getTopStories();
+        List<Integer> topStoires=storyService.getTopStories();
 		
        // System.out.println(" top stories " + topStoires);
         
@@ -56,7 +63,7 @@ public class AsycService {
         	PriorityQueue<StoryPojo> storyScores=new PriorityQueue<StoryPojo>(scoreComparator);
         	for(Integer storyId: topStoires) {
         		// find the score of each operator
-        		StoryPojo storyPojo=hackerApiManager.getStoryInfo(storyId.longValue());
+        		StoryPojo storyPojo=storyService.getStoryInfo(storyId.longValue());
         		if(storyPojo != null) {
         			storyScores.add(storyPojo);
         		}
@@ -67,25 +74,40 @@ public class AsycService {
         	if(storyScores.size() > 0) {
         		
         		// remove the comments of the top stories
-        		commentRepository.deleteAll();
+        		commentService.deleteAllComments();
         		
         		// remove the old stories
-        		storyRespository.deleteOldStories();
+        		storyService.deleteOldStories();
         		
         		// change the new to old stories
-        		storyRespository.changeNewToOldStories();
+        		storyService.changeNewToOldStories();;
         		
         		// update the top stories into 
-        		int i=2;
-        		while(i > 0 && !storyScores.isEmpty()) {
+        		int i=top;
+        		while(i <= 10 && !storyScores.isEmpty()) {
         			StoryPojo storyPojo=storyScores.poll(); // get the top story
         			Story story=convertStoryPojotoStory(storyPojo); // convert into data object format
-        			storyRespository.save(story); // store into data base
+        			storyService.saveStory(story); // store into data base
         			//Runnable commentJob=new CommentJob(storyPojo.getKids(),story.getStoryId()); // find the top 10 comments for this story store into DB
-        			commentJob.setCommentIds(storyPojo.getKids());
-        			commentJob.setParentId(story.getStoryId());
-        			new Thread(commentJob).start(); // execute the parallel thread
-        			i--;
+        			// only two threads for comment
+        			
+        			if(i == 1) {
+        				commentJob.setCommentIds(storyPojo.getKids());
+                		commentJob.setParentId(story.getStoryId());
+                		new Thread(commentJob).start();
+        			}
+        			else if(i == 2) {
+        				commentJob2.setCommentIds(storyPojo.getKids());
+                		commentJob2.setParentId(story.getStoryId());
+                		new Thread(commentJob2).start();
+        			}
+        			else if(i == 3) {
+        				commentJob.setCommentIds(storyPojo.getKids());
+                		commentJob.setParentId(story.getStoryId());
+                		new Thread(commentJob3).start(); // execute the parallel thread
+        			}
+        			
+        			i++;
         		}
         	}
         	
@@ -105,7 +127,7 @@ public class AsycService {
 		Story story=new Story();
 		story.setStoryId(storyPojo.getId());
 		story.setTitle(storyPojo.getTitle());
-		story.setCreatedAt(LocalDateTime.ofEpochSecond(storyPojo.getTime(), 0, ZonedDateTime.now().getOffset()));
+		story.setCreatedAt(UnixTimeToLocalDateTIme.getLocalDateTime(storyPojo.getTime()));
 		story.setIsTopStory(true);
 		story.setSubmittedBy(storyPojo.getBy());
 		story.setUrl(storyPojo.getUrl());

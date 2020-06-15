@@ -31,21 +31,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Component
 public class AppConfiguration  {
 
-  @Value("${aeCorePoolSIze:10}")
-  private Integer aeCorePoolSize;
-
-  @Value("${aeMaxPoolSize:50}")
-  private Integer aeMaxPoolSize;
-
-  @Value("${aeQueueCapacity:10000}")
-  private Integer aeQueueCapacity;
-
-  @Value("${aeKeepAliveSeconds:20}")
-  private Integer aeKeepAliveSeconds;
-
-  @Value("${aeThreadnamePrefix:AsynchThread-}")
-  private String aeThreadnamePrefix;
-
   @Value("${httpClient.connection.pool.size:10}")
   private Integer poolMaxTotal;
 

@@ -24,16 +24,14 @@ public class Comment {
 	@Column(name="story_id")
 	private Long storyId;
 	
-	@Column(name="comment_id")
+	@Column(name="comment_id", unique=true)
 	private Long commentId;
 	
 	@Column(name="added_by")
 	private String addedBy;
 	
-	@Column(name="age")
-	private Integer time;
-	
 	@Column(name="text",columnDefinition="TEXT")
 	private String text;
+	
 	
 }

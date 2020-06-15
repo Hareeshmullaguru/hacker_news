@@ -13,6 +13,7 @@ import com.paytm.insider.hackernews.external.RestApiManager;
 import com.paytm.insider.hackernews.external.endpoints.HackerEndpoints;
 import com.paytm.insider.hackernews.external.pojo.hackernews.CommentPojo;
 import com.paytm.insider.hackernews.external.pojo.hackernews.StoryPojo;
+import com.paytm.insider.hackernews.external.pojo.hackernews.UserPojo;
 
 @Component
 public class HackerNewsApiManager extends RestApiManager {
@@ -54,6 +55,18 @@ public class HackerNewsApiManager extends RestApiManager {
             null,
             httpHeaders,
             CommentPojo.class,
+            null
+        );
+    }
+    
+    public UserPojo getUserInfo(String name) {
+    	HttpHeaders httpHeaders = getRequestHeaders();
+        return super.get(
+        	baseHackerUrl,
+            HackerEndpoints.get_user_url+name+".json",
+            null,
+            httpHeaders,
+            UserPojo.class,
             null
         );
     }

@@ -1,0 +1,72 @@
+[
+  {
+    "addedBy": "underdeserver",
+    "storyId": "23489068",
+    "id": "41",
+    "text": "I honestly don&#x27;t understand why JSTOR, Elsevier and others like them still need to exist.<p>Top universities should just found a non-profit, per subject, with a single paid facilitator and a single paid editor (per journal) to find peer reviewers and edit the papers into a monthly journal.<p>Modern tech has made it ridiculously easy to type, edit and publish such a thing if the inputs are LaTeX, Word, Markdown files or a Google Doc. And if you want it printed, there are shops that can do that for you for a small fee as well.<p>This should be 100% open access to everyone, extremely cheap and could be 100% funded by those who are still willing to pay for paper versions or by tiny contributions from the top 100 universities.",
+    "commentId": "23489582"
+  },
+  {
+    "addedBy": "LeifCarrotson",
+    "storyId": "23489068",
+    "id": "42",
+    "text": "Here is the MIT Framework for Publisher Contracts:<p><a href=\"https:&#x2F;&#x2F;libraries.mit.edu&#x2F;scholarly&#x2F;publishing&#x2F;framework&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;libraries.mit.edu&#x2F;scholarly&#x2F;publishing&#x2F;framework&#x2F;</a><p>It requires that:<p>1. No author will be required to waive any institutional or funder open access policy to publish in any of the publisher’s journals.<p>2. No author will be required to relinquish copyright, but instead will be provided with options that enable publication while also providing authors with generous reuse rights.<p>3. Publishers will directly deposit scholarly articles in institutional repositories immediately upon publication or will provide tools&#x2F;mechanisms that facilitate immediate deposit.<p>4. Publishers will provide computational access to subscribed content as a standard part of all contracts, with no restrictions on non-consumptive, computational analysis of the corpus of subscribed content.<p>5. Publishers will ensure the long-term digital preservation and accessibility of their content through participation in trusted digital archives.<p>6. Institutions will pay a fair and sustainable price to publishers for value-added services, based on transparent and cost-based pricing models.<p>Not surprising that Elsevier couldn&#x27;t meet these requirements. #2 in particular seems antithetical to Elsevier&#x27;s philosophy.<p>What was surprising was the number of institutions which had signed onto the framework - my alma mater included. I&#x27;m curious how many of these still have an Elsevier contract.",
+    "commentId": "23489415"
+  },
+  {
+    "addedBy": "whatshisface",
+    "storyId": "23489068",
+    "id": "43",
+    "text": "An interesting side-effect of the shift to open access will be that anyone who&#x27;s still publishing in closed-access journals will be at a severe disadvantage in getting cited compared to people who publish open access and make preprints available.",
+    "commentId": "23489466"
+  },
+  {
+    "addedBy": "obiefernandez",
+    "storyId": "23489068",
+    "id": "44",
+    "text": "Further indications that Aaron Swartz didn&#x27;t die completely in vain...",
+    "commentId": "23489324"
+  },
+  {
+    "addedBy": "czzr",
+    "storyId": "23489068",
+    "id": "45",
+    "text": "When thinking about the cost of providing the services journals provide, I’m always struck by the example of PloS - non-profit, set up with the mission of promoting open access, and just about surviving by charging authors $2000-$3000 per article.<p>I can only conclude that managing journals is not as cost free as most people in this thread seem to think, for whatever reason.",
+    "commentId": "23490336"
+  },
+  {
+    "addedBy": "MrGunn",
+    "storyId": "23489068",
+    "id": "46",
+    "text": "As a researcher, I understand the frustrations with the publishing process. I spent years complaining about it, then I decided to do something. A few years later, my company was acquired by Elsevier &amp; everyone was calling me a sellout. What changed? The same thing that changes every time you get your hands dirty trying to fix something - you see all the hidden complexity that wasn&#x27;t apparent before.<p>Are there legacy components to academic publishing? Sure there are. Is research assessment &amp; funding messed up? Yep. Will posting preprints or research blogging fix everything? Nope.<p>If you take a step back and look at research as an enterprise, the scale is absolutely staggering. Tens of billions of public &amp; private money needs to be allocated to researchers every year &amp; it needs to be done in a way that is insulated from political &amp; social tides, so that big problems like cancer, aging, antibiotic resistance &amp; pandemics can be worked on consistently over the decades it takes to make real progress. You don&#x27;t want a system like this to change quickly. That said, it is changing.<p>Information and analytical services  that support researchers and clinicians is the biggest growing part of Elsevier&#x27;s business for many years now, and these businesses only get even more valuable as more and more content is available openly.<p>At the same time, Elsevier continues to provide all the back-end services that scientific societies, funders, researchers, and their institutions need to keep the system running so they can focus on their research.<p>What are these systems?<p>Starting with societies, many of them get the funding they use to support the mission of the society - advocating on policy issues important to their research community - through the society journal. Elsevier makes running the journal financially sustainable by hosting it, recruiting peer reviewers, attracting and maintaining a good editorial board, handling ethics complaints, and providing a cheap platform.<p>Elsevier helps funders understand how to allocate their funds in alignment with the funders mission, not just by conferring status, but with more advanced ways of understand the broader impact of a work. Elsevier (including me personally) has worked to undo the negative effects of over-reliance on the impact factor: <a href=\"https:&#x2F;&#x2F;www.elsevier.com&#x2F;authors-update&#x2F;story&#x2F;impact-metrics&#x2F;elsevier-is-expanding-its-use-of-altmetrics\" rel=\"nofollow\">https:&#x2F;&#x2F;www.elsevier.com&#x2F;authors-update&#x2F;story&#x2F;impact-metrics...</a><p>Researchers and their institutions use all this stuff to showcase their work, recruit faculty, attract funding, make their case for tenure &amp; decide who should get it.<p>After spending years working on projects with these different groups, I developed a much more nuanced understanding of how everything works &amp; what the levers of change actually are. Happy to discuss with anyone!",
+    "commentId": "23492330"
+  },
+  {
+    "addedBy": "snambi",
+    "storyId": "23489068",
+    "id": "47",
+    "text": "Why can&#x27;t techincal papers use something similar to github&#x2F;git Pull-request model?",
+    "commentId": "23490223"
+  },
+  {
+    "addedBy": "nomercy400",
+    "storyId": "23489068",
+    "id": "48",
+    "text": "I&#x27;m curious (playing devil&#x27;s advocate):\nDoes this mean that MIT can now do research and not be required to publish this anywhere, not even journals?<p>And, if somebody from MIT does publish something under this framework, can they claim copyright and disallow any use of the contents of the papers if so convenient? Move away from patents and straight into copyright. We all know how well the US copyright system works, right?<p>I mean, doesn&#x27;t Elsevier guarantee that the paper will be &#x27;free-from-copyright&#x27; of the original institution&#x2F;country, to any other research institution part of their network. Like, share the knowledge to those connected.<p>Do these moves away from Elsevier mean a more open-access, or a more-copyrighted-access to papers? I see no commitment for MIT to relinquish copyright, nor any commitment to make everything open access.",
+    "commentId": "23489890"
+  },
+  {
+    "addedBy": "q3k",
+    "storyId": "23489068",
+    "id": "49",
+    "text": "<p><pre><code>    You don&#x27;t have permission to access &quot;http:&#x2F;&#x2F;news.mit.edu&#x2F;2020&#x2F;guided-by-open-access-principles-mit-ends-elsevier-negotiations-0611&quot; on this server.\n    Reference #18.9d580317.1591886472.57240f92</code></pre>",
+    "commentId": "23489413"
+  },
+  {
+    "addedBy": "birktj",
+    "storyId": "23489068",
+    "id": "50",
+    "text": "Recently (I believe around a year ago or so) my university lost access to many publisher services because of some negotiations. The negotiations were about a new Norwegian law requiring all publicly funded research to be publicly available. I don&#x27;t remember exactly what happened with the negotiations, but I presume they somehow found a solution.<p>EDIT: Found a relevant website about open access in Norway <a href=\"https:&#x2F;&#x2F;www.openaccess.no&#x2F;english&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;www.openaccess.no&#x2F;english&#x2F;</a>",
+    "commentId": "23489627"
+  }
+]
