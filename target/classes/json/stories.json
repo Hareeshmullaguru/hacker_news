@@ -1,0 +1,222 @@
+[
+  {
+    "score": "1094",
+    "isTopStory": "f",
+    "storyId": "23489068",
+    "submittedBy": "davrosthedalek",
+    "id": "1",
+    "createdAt": "2020-06-11T19:42:13.000+0530",
+    "title": "MIT Ends Elsevier Negotiations",
+    "_uid": 1,
+    "url": "https://news.mit.edu/2020/guided-submittedBy-open-access-principles-mit-ends-elsevier-negotiations-0611"
+  },
+  {
+    "score": "1065",
+    "isTopStory": "f",
+    "storyId": "23490367",
+    "submittedBy": "napolux",
+    "id": "2",
+    "createdAt": "2020-06-11T21:44:28.000+0530",
+    "title": "A Facebook crawler was making 7M requests per day to my stupid website",
+    "_uid": 2,
+    "url": "https://coding.napolux.com/a-facebook-crawler-was-making-7m-requests-per-day-to-my-stupid-website/"
+  },
+  {
+    "score": "1011",
+    "isTopStory": "f",
+    "storyId": "23506580",
+    "submittedBy": "dehrmann",
+    "id": "3",
+    "createdAt": "2020-06-13T09:13:49.000+0530",
+    "title": "Zoom Acknowledges It Suspended Activists' Accounts at China's Request",
+    "_uid": 3,
+    "url": "https://www.npr.org/2020/06/12/876351501/zoom-acknowledges-it-suspended-activists-accounts-at-china-s-request"
+  },
+  {
+    "score": "850",
+    "isTopStory": "f",
+    "storyId": "23497236",
+    "submittedBy": "m0ck",
+    "id": "4",
+    "createdAt": "2020-06-12T14:00:56.000+0530",
+    "title": "Play Counter-Strike 1.6 in your browser",
+    "_uid": 4,
+    "url": "http://cs-online.club"
+  },
+  {
+    "score": "844",
+    "isTopStory": "f",
+    "storyId": "23490115",
+    "submittedBy": "tech4all",
+    "id": "5",
+    "createdAt": "2020-06-11T21:22:39.000+0530",
+    "title": "Ask HN: My wife might lose the ability to speak in 3 weeks – how to prepare?",
+    "_uid": 5,
+    "url": null
+  },
+  {
+    "score": "734",
+    "isTopStory": "f",
+    "storyId": "23498781",
+    "submittedBy": "aphyr",
+    "id": "6",
+    "createdAt": "2020-06-12T18:33:30.000+0530",
+    "title": "Jepsen: PostgreSQL 12.3",
+    "_uid": 6,
+    "url": "http://jepsen.io/analyses/postgresql-12.3"
+  },
+  {
+    "score": "697",
+    "isTopStory": "f",
+    "storyId": "23494366",
+    "submittedBy": "tomato2juice",
+    "id": "7",
+    "createdAt": "2020-06-12T05:08:08.000+0530",
+    "title": "University of the People: Tuition-Free, Accredited Online Degree Programs",
+    "_uid": 7,
+    "url": "https://www.uopeople.edu/"
+  },
+  {
+    "score": "690",
+    "isTopStory": "f",
+    "storyId": "23501021",
+    "submittedBy": "askytb",
+    "id": "8",
+    "createdAt": "2020-06-12T22:14:09.000+0530",
+    "title": "Biohacking Lite",
+    "_uid": 8,
+    "url": "https://karpathy.github.io/2020/06/11/biohacking-lite/"
+  },
+  {
+    "score": "574",
+    "isTopStory": "f",
+    "storyId": "23488307",
+    "submittedBy": "obilgic",
+    "id": "9",
+    "createdAt": "2020-06-11T18:28:12.000+0530",
+    "title": "Capitol Hill Autonomous Zone",
+    "_uid": 9,
+    "url": "https://capitolhillautonomous.zone/"
+  },
+  {
+    "score": "546",
+    "isTopStory": "f",
+    "storyId": "23491940",
+    "submittedBy": "therecb",
+    "id": "10",
+    "createdAt": "2020-06-12T00:07:31.000+0530",
+    "title": "Show HN: Download Hi-Res Public Domain Art, Posters and Illustrations",
+    "_uid": 10,
+    "url": "https://artvee.com/"
+  },
+  {
+    "score": "1094",
+    "isTopStory": "t",
+    "storyId": "23489068",
+    "submittedBy": "davrosthedalek",
+    "id": "11",
+    "createdAt": "2020-06-11T19:42:13.000+0530",
+    "title": "MIT Ends Elsevier Negotiations",
+    "_uid": 11,
+    "url": "https://news.mit.edu/2020/guided-submittedBy-open-access-principles-mit-ends-elsevier-negotiations-0611"
+  },
+  {
+    "score": "1065",
+    "isTopStory": "t",
+    "storyId": "23490367",
+    "submittedBy": "napolux",
+    "id": "12",
+    "createdAt": "2020-06-11T21:44:28.000+0530",
+    "title": "A Facebook crawler was making 7M requests per day to my stupid website",
+    "_uid": 12,
+    "url": "https://coding.napolux.com/a-facebook-crawler-was-making-7m-requests-per-day-to-my-stupid-website/"
+  },
+  {
+    "score": "1012",
+    "isTopStory": "t",
+    "storyId": "23506580",
+    "submittedBy": "dehrmann",
+    "id": "13",
+    "createdAt": "2020-06-13T09:13:49.000+0530",
+    "title": "Zoom Acknowledges It Suspended Activists' Accounts at China's Request",
+    "_uid": 13,
+    "url": "https://www.npr.org/2020/06/12/876351501/zoom-acknowledges-it-suspended-activists-accounts-at-china-s-request"
+  },
+  {
+    "score": "850",
+    "isTopStory": "t",
+    "storyId": "23497236",
+    "submittedBy": "m0ck",
+    "id": "14",
+    "createdAt": "2020-06-12T14:00:56.000+0530",
+    "title": "Play Counter-Strike 1.6 in your browser",
+    "_uid": 14,
+    "url": "http://cs-online.club"
+  },
+  {
+    "score": "844",
+    "isTopStory": "t",
+    "storyId": "23490115",
+    "submittedBy": "tech4all",
+    "id": "15",
+    "createdAt": "2020-06-11T21:22:39.000+0530",
+    "title": "Ask HN: My wife might lose the ability to speak in 3 weeks – how to prepare?",
+    "_uid": 15,
+    "url": null
+  },
+  {
+    "score": "735",
+    "isTopStory": "t",
+    "storyId": "23498781",
+    "submittedBy": "aphyr",
+    "id": "16",
+    "createdAt": "2020-06-12T18:33:30.000+0530",
+    "title": "Jepsen: PostgreSQL 12.3",
+    "_uid": 16,
+    "url": "http://jepsen.io/analyses/postgresql-12.3"
+  },
+  {
+    "score": "697",
+    "isTopStory": "t",
+    "storyId": "23494366",
+    "submittedBy": "tomato2juice",
+    "id": "17",
+    "createdAt": "2020-06-12T05:08:08.000+0530",
+    "title": "University of the People: Tuition-Free, Accredited Online Degree Programs",
+    "_uid": 17,
+    "url": "https://www.uopeople.edu/"
+  },
+  {
+    "score": "690",
+    "isTopStory": "t",
+    "storyId": "23501021",
+    "submittedBy": "askytb",
+    "id": "18",
+    "createdAt": "2020-06-12T22:14:09.000+0530",
+    "title": "Biohacking Lite",
+    "_uid": 18,
+    "url": "https://karpathy.github.io/2020/06/11/biohacking-lite/"
+  },
+  {
+    "score": "574",
+    "isTopStory": "t",
+    "storyId": "23488307",
+    "submittedBy": "obilgic",
+    "id": "19",
+    "createdAt": "2020-06-11T18:28:12.000+0530",
+    "title": "Capitol Hill Autonomous Zone",
+    "_uid": 19,
+    "url": "https://capitolhillautonomous.zone/"
+  },
+  {
+    "score": "546",
+    "isTopStory": "t",
+    "storyId": "23491940",
+    "submittedBy": "therecb",
+    "id": "20",
+    "createdAt": "2020-06-12T00:07:31.000+0530",
+    "title": "Show HN: Download Hi-Res Public Domain Art, Posters and Illustrations",
+    "_uid": 20,
+    "url": "https://artvee.com/"
+  }
+]
