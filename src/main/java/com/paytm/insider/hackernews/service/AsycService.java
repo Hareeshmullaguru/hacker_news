@@ -84,30 +84,30 @@ public class AsycService {
         		
         		// update the top stories into 
         		int i=top;
-        		while(i <= 10 && !storyScores.isEmpty()) {
+        		while(i > 0 && !storyScores.isEmpty()) {
         			StoryPojo storyPojo=storyScores.poll(); // get the top story
         			Story story=convertStoryPojotoStory(storyPojo); // convert into data object format
         			storyService.saveStory(story); // store into data base
         			//Runnable commentJob=new CommentJob(storyPojo.getKids(),story.getStoryId()); // find the top 10 comments for this story store into DB
         			// only two threads for comment
         			
-        			if(i == 1) {
+        			if(i == 10) {
         				commentJob.setCommentIds(storyPojo.getKids());
                 		commentJob.setParentId(story.getStoryId());
                 		new Thread(commentJob).start();
         			}
-        			else if(i == 2) {
+        			else if(i == 9) {
         				commentJob2.setCommentIds(storyPojo.getKids());
                 		commentJob2.setParentId(story.getStoryId());
                 		new Thread(commentJob2).start();
         			}
-        			else if(i == 3) {
+        			else if(i == 8) {
         				commentJob.setCommentIds(storyPojo.getKids());
                 		commentJob.setParentId(story.getStoryId());
                 		new Thread(commentJob3).start(); // execute the parallel thread
         			}
         			
-        			i++;
+        			i--;
         		}
         	}
         	

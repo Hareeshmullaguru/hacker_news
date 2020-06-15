@@ -60,7 +60,7 @@ public class CommentJob implements Runnable{
 	@Override
 	public void run() {
 		
-      if(commentIds != null && commentIds.size() == 0) return;
+      if(commentIds == null || commentIds.size() == 0) return;
 		
 		HashMap<Long,Long> commentsParent=new HashMap<Long,Long>(); // parent comment and count
 		

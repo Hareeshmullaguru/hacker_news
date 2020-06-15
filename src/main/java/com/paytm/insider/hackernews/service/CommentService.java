@@ -66,7 +66,7 @@ public class CommentService {
 	}
 		
 	public CommentPojo getCommentInfo(Long commentId) {
-		System.out.println(" comment Id " + commentId);
+		//System.out.println(" comment Id " + commentId);
 		return hackerApiManager.getCommentInfo(commentId);
 	}
 	
@@ -75,7 +75,7 @@ public class CommentService {
 	}
 	
 	public void saveComment(Comment comment) {
-		System.out.println(" save comment ");
+		//System.out.println(" save comment ");
 		commentRespository.save(comment);
 	}
 	
