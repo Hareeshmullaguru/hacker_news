@@ -10,7 +10,7 @@ This project provides three operations of Hacker News
  
  
 Future Work 
-    -> Add REDIS cache
-    -> Include the more threads
-    -> Improve code coverage
+    a. Add REDIS cache
+    b. Include the more threads
+    c. Improve code coverage
  
